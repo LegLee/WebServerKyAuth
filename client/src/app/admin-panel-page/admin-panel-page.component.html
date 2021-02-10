@@ -1,0 +1,18 @@
+<main class="content">
+  <div class="page-title">
+    <h4>Пользователи</h4>
+  </div>
+  <div class="row" *ngIf="!loading">
+    <div class="col s12">
+      <div class="collection">
+        <p *ngFor="let userFor of users" class="collection-item">
+          <label class="email">{{userFor.email}}</label>
+          <label class="isAdmin"> || IsAdmin: {{userFor.isAdmin}}</label>
+          <label class="id"> || Id: {{userFor._id}}</label>
+          <button *ngIf="!userFor.isAdmin" type="submit" class="modal-action btn waves-effect marginBtn" (click)="deleteUser(userFor)">Delete</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+<app-loader *ngIf = "loading"></app-loader>

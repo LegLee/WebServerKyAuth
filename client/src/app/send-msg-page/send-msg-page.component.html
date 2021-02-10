@@ -1,0 +1,17 @@
+<main class="content">
+  <form method="post" [formGroup]="form"
+        (ngSubmit)="onSubmit()" >
+    <h1>Введите данные</h1>
+    <label>tokenVk</label><br>
+    <input formControlName="tokenVK" id="tokenVk" type="text"/>
+    <label>chatIdTg</label><br>
+    <input formControlName="chatIdTg" id="chatIdTg" type="text"/>
+    <label>tokenTg</label><br>
+    <input formControlName="tokenTg" id="tokenTg" type="text"/>
+    <label>msg</label><br>
+    <input formControlName="messageToSend" id="messageToSend" type="text"/>
+    <div class="card-action">
+      <button type="submit" class="modal-action btn waves-effect">Send</button>
+    </div>
+  </form>
+</main>
